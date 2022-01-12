@@ -1,0 +1,35 @@
+.x{
+	display: inline-block;
+	margin-top: 1rem;
+	padding: .7rem 2.5rem;
+	font-size: 1.5rem;
+	border-radius: .5rem;
+	color: #333;
+	background:yellow;
+	position: relative;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	overflow: hidden;
+	z-index: 0;
+	cursor: pointer;
+}
+
+.x:before{
+	content: '';
+	position: absolute;
+	top: 0;left: 0;
+	height: 100%;
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 10% 25%, 0 100%);
+    z-index: -1;
+    background: #444;
+    transition: .3s;
+}
+
+.x:hover:before{
+	clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+}
+
+.x:hover{
+	color: yellow;
+
+}
